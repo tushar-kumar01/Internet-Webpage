@@ -41,37 +41,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add the sidebar content
     sidebar.innerHTML = `
-    <h2 class="text-center mb-4">Tool Bar</h2>
-    <div class="list-group">
-      <a href="index.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-home me-2"></i>Home
-      </a>
-      <a href="intro.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-book me-2"></i>Introduction
-      </a>
-      <a href="infrastructure.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-network-wired me-2"></i>Infrastructure
-      </a>
-      <a href="evolution.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-code me-2"></i>Web Evolution
-      </a>
-      <a href="careers.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-briefcase me-2"></i>Careers
-      </a>
-      <a href="milestones.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-trophy me-2"></i>Milestones
-      </a>
-      <a href="roadmap.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-map me-2"></i>Roadmap
-      </a>
-      <a href="trends.html" class="list-group-item list-group-item-action">
-        <i class="fas fa-chart-line me-2"></i>Trends
-      </a>
-    </div>
-    <button class="close-sidebar btn btn-light btn-sm">
-      <i class="fas fa-times"></i> Close
-    </button>
-  `;
+      <h2 class="text-center mb-4">Tool Bar</h2>
+      <div class="list-group">
+        <a href="index.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-home me-2"></i>Home
+        </a>
+        <a href="intro.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-book me-2"></i>Introduction
+        </a>
+        <a href="infrastructure.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-network-wired me-2"></i>Infrastructure
+        </a>
+        <a href="evolution.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-code me-2"></i>Web Evolution
+        </a>
+        <a href="careers.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-briefcase me-2"></i>Careers
+        </a>
+        <a href="milestones.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-trophy me-2"></i>Milestones
+        </a>
+        <a href="roadmap.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-map me-2"></i>Roadmap
+        </a>
+        <a href="trends.html" class="list-group-item list-group-item-action">
+          <i class="fas fa-chart-line me-2"></i>Trends
+        </a>
+      </div>
+      <button class="close-sidebar btn btn-light btn-sm">
+        <i class="fas fa-times"></i> Close
+      </button>
+    `;
+
     // Insert the sidebar into the body
     document.body.appendChild(sidebar);
 
@@ -90,12 +91,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add event listeners for toggling the sidebar
     menuButton.addEventListener('click', () => {
         sidebar.classList.toggle('hidden'); // Toggle the sidebar visibility
+        document.querySelector('.main-content').classList.toggle('expanded'); // Adjust content layout
     });
 
     // Add event listener for the close button
     sidebar.addEventListener('click', (event) => {
         if (event.target.classList.contains('close-sidebar') || event.target.closest('.close-sidebar')) {
             sidebar.classList.add('hidden'); // Hide the sidebar
+            document.querySelector('.main-content').classList.remove('expanded'); // Reset content layout
         }
     });
 });

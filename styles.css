@@ -137,6 +137,7 @@ body {
 }
 /* Vertical Sidebar Styles */
 /* Sidebar Styles */
+/* Sidebar Styles */
 .dashboard-sidebar {
   position: fixed;
   top: 0;
@@ -167,7 +168,6 @@ body {
 }
 
 /* Close Button Styles */
-/* Close Button Styles */
 .close-sidebar {
   position: absolute;
   bottom: 20px; /* Position at the bottom */
@@ -188,11 +188,6 @@ body {
   color: white;
 }
 
-/* Ensure the sidebar has relative positioning for the button to align properly */
-.dashboard-sidebar {
-  position: relative;
-  padding-bottom: 60px; /* Add padding to avoid overlap with the close button */
-}
 /* Hamburger Menu Styles */
 .hamburger-menu {
   position: fixed;
