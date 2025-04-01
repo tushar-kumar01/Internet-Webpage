@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Infrastructure | Internet Evolution</title>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dashboard.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <?php include 'shared_components/header.html'; ?>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center mb-5">Understanding Internet Infrastructure</h1>
+      
+      <div class="text-center mb-5">
+        <img src="https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg" 
+             alt="Data center servers" 
+             class="content-image animate__animated animate__fadeIn">
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2>What is Internet Infrastructure?</h2>
+          <p class="lead">Internet infrastructure refers to the physical and logical systems that enable the functioning of the internet, including servers, data centers, ISPs, and DNS systems.</p>
+
+          <div class="card bg-light border-0 mb-4">
+            <div class="card-body">
+              <h3 class="card-title text-primary"><i class="fas fa-server me-2"></i>Key Concept</h3>
+              <p class="card-text">The infrastructure of the internet is a complex network of interconnected systems that ensure data is transmitted efficiently and securely across the globe.</p>
+            </div>
+          </div>
+
+          <h2>Components of Internet Infrastructure</h2>
+          <p>Understanding the components of internet infrastructure helps us appreciate the complexity and scale of the systems that power the modern web.</p>
+
+          <div class="row g-4 my-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="card-title"><i class="fas fa-network-wired me-2 text-primary"></i>ISPs</h3>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Provide internet access to users</li>
+                    <li class="list-group-item">Operate at local, regional, and global levels</li>
+                    <li class="list-group-item">Facilitate data transmission through peering agreements</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h3 class="card-title"><i class="fas fa-globe me-2 text-primary"></i>DNS</h3>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Translates domain names to IP addresses</li>
+                    <li class="list-group-item">Ensures users can access websites using human-readable names</li>
+                    <li class="list-group-item">Operates through a hierarchical system of root, TLD, and authoritative servers</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-warning bg-opacity-10 border-start border-warning border-4 mb-4">
+            <div class="card-body">
+              <h3 class="card-title text-warning"><i class="fas fa-database me-2"></i>Fun Fact</h3>
+              <p class="card-text">The first DNS server was created in 1983 to simplify the process of accessing websites by replacing numeric IP addresses with domain names.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <?php include 'shared_components/footer.html'; ?>
+
+  <script>
+    // Update footer navigation
+    document.querySelector('footer a[href="#"]').href = "toc.html";
+    document.querySelector('footer a[href="toc.html"]').href = "intro.html";
+    document.querySelector('footer span').textContent = 'Page 4 of 22';
+
+    // Add scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const animateElements = document.querySelectorAll('.card, img, h2');
+      animateElements.forEach((el, index) => {
+        el.classList.add('animate__animated', 'animate__fadeInUp');
+        el.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Birth of the Internet | Internet Evolution</title>
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="dashboard.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <?php include 'shared_components/header.html'; ?>
+
+  <!-- Main Content -->
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center mb-5">The Birth of the Internet</h1>
+
+      <div class="card mb-5 animate__animated animate__fadeIn">
+        <div class="card-body">
+          <h2 class="card-title"><i class="fas fa-network-wired me-2 text-primary"></i>ARPANET: The Foundation (1969)</h2>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="https://images.pexels.com/photos/163125/board-printed-circuit-board-computer-electronics-163125.jpeg" 
+                   alt="Early networking equipment" 
+                   class="img-fluid rounded mb-3">
+            </div>
+            <div class="col-md-6">
+              <p>Developed by the U.S. Defense Department's Advanced Research Projects Agency (ARPA), ARPANET was the first operational packet-switched network. It connected four university computers in 1969:</p>
+              <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">1. UCLA - Leonard Kleinrock's lab</li>
+                <li class="list-group-item">2. Stanford Research Institute</li>
+                <li class="list-group-item">3. UC Santa Barbara</li>
+                <li class="list-group-item">4. University of Utah</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-primary bg-opacity-10 border-start border-primary border-4 mb-3">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Packet Switching Revolution</h3>
+              <p>Unlike traditional phone systems that required dedicated circuits, ARPANET used packet switching - breaking data into small packets that could take different routes to their destination. This made the network:</p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item bg-transparent">More efficient - Shared bandwidth between multiple connections</li>
+                <li class="list-group-item bg-transparent">More resilient - Automatic rerouting around failures</li>
+                <li class="list-group-item bg-transparent">More scalable - Could grow without major redesign</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-5 animate__animated animate__fadeIn">
+        <div class="card-body">
+          <h2 class="card-title"><i class="fas fa-plug me-2 text-primary"></i>TCP/IP: The Universal Language (1983)</h2>
+          
+          <p>The transition from NCP to TCP/IP in 1983 marked the Internet's true birth, creating a standardized way for different networks to communicate:</p>
+          
+          <div class="row g-4 mb-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title text-primary">TCP Layer</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Breaks data into numbered packets</li>
+                    <li class="list-group-item">Verifies complete delivery</li>
+                    <li class="list-group-item">Requests retransmission of lost packets</li>
+                    <li class="list-group-item">Reassembles data in correct order</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h4 class="card-title text-primary">IP Layer</h4>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Handles addressing (IPv4/IPv6)</li>
+                    <li class="list-group-item">Routes packets between networks</li>
+                    <li class="list-group-item">Fragments large packets when needed</li>
+                    <li class="list-group-item">Works with routing protocols like BGP</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-info">
+            <h4><i class="fas fa-lightbulb me-2"></i>Why TCP/IP Won</h4>
+            <p>TCP/IP succeeded because it was:</p>
+            <ul>
+              <li><strong>Open</strong> - Freely available specification</li>
+              <li><strong>Flexible</strong> - Worked across different hardware</li>
+              <li><strong>Scalable</strong> - Could handle network growth</li>
+              <li><strong>Robust</strong> - Automatic error recovery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-5 animate__animated animate__fadeIn">
+        <div class="card-body">
+          <h2 class="card-title"><i class="fas fa-globe me-2 text-primary"></i>World Wide Web (1989)</h2>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <img src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg" 
+                   alt="Computer code" 
+                   class="img-fluid rounded mb-3">
+            </div>
+            <div class="col-md-6">
+              <p>Tim Berners-Lee at CERN invented the Web to help scientists share research. His 1989 proposal outlined:</p>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item">HTML - Hypertext Markup Language</li>
+                <li class="list-group-item">HTTP - Hypertext Transfer Protocol</li>
+                <li class="list-group-item">URLs - Uniform Resource Locators</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-success bg-opacity-10 border-start border-success border-4 mb-3">
+            <div class="card-body">
+              <h3 class="card-title text-success">Web vs Internet</h3>
+              <p>While often confused, they're distinct:</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header bg-success text-white">
+                      <h5 class="mb-0">Internet</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>The global network infrastructure (since 1969)</p>
+                      <ul>
+                        <li>Physical cables/routers</li>
+                        <li>TCP/IP protocols</li>
+                        <li>Underlying connection layer</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-header bg-primary text-white">
+                      <h5 class="mb-0">World Wide Web</h5>
+                    </div>
+                    <div class="card-body">
+                      <p>An application running on the Internet (since 1989)</p>
+                      <ul>
+                        <li>Websites and pages</li>
+                        <li>HTML/HTTP protocols</li>
+                        <li>Content layer</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card animate__animated animate__fadeIn">
+        <div class="card-body">
+          <h2 class="card-title"><i class="fas fa-history me-2 text-primary"></i>Internet Evolution Timeline</h2>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot bg-primary"></div>
+              <h3>1969</h3>
+              <p>First ARPANET connection between UCLA and SRI. The first message: "LO" (attempted "LOGIN" that crashed after 2 characters).</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot bg-primary"></div>
+              <h3>1971</h3>
+              <p>Ray Tomlinson invents email, choosing @ symbol. First network email program developed.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot bg-primary"></div>
+              <h3>1983</h3>
+              <p>TCP/IP becomes standard protocol. DNS (Domain Name System) introduced the next year.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot bg-primary"></div>
+              <h3>1989</h3>
+              <p>Tim Berners-Lee proposes the World Wide Web at CERN.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot bg-primary"></div>
+              <h3>1991</h3>
+              <p>First website goes live at CERN. Web becomes publicly available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <?php include 'shared_components/footer.html'; ?>
+
+  <script>
+    // Update footer navigation
+    document.querySelector('footer a[href="#"]').href = "intro.html";
+    document.querySelector('footer a[href="toc.html"]').href = "evolution.html";
+    document.querySelector('footer span').textContent = 'Page 4 of 22';
+  </script>
+</body>
+</html>

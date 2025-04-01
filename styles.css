@@ -1,0 +1,221 @@
+/* Bootstrap 5 + Custom Apple-inspired Styles */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --apple-dark: #1d1d1f;
+  --apple-light: #f5f5f7;
+  --apple-blue: #0066cc;
+  --apple-gray: #86868b;
+}
+
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--apple-dark);
+  background-color: var(--apple-light);
+  line-height: 1.5;
+}
+
+/* Apple-like navigation */
+.navbar {
+  background-color: rgba(29, 29, 31, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding: 0 1rem !important;
+}
+
+/* Hero section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, #000, #1d1d1f);
+  color: white;
+  padding-top: 4rem;
+}
+
+/* Content sections */
+.section {
+  padding: 5rem 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.section-dark {
+  background-color: var(--apple-dark);
+  color: white;
+}
+
+.section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 3rem 0 1.5rem;
+}
+
+/* Apple-like cards */
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Image styling */
+.content-image {
+  width: 100%;
+  border-radius: 12px;
+  margin: 2rem 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.prose h2 {
+  @apply text-3xl font-semibold mt-10 mb-4 text-gray-800;
+}
+
+.prose h3 {
+  @apply text-2xl font-medium mt-8 mb-3 text-gray-700;
+}
+
+.prose p {
+  @apply text-lg leading-relaxed mb-4;
+}
+
+.timeline-item {
+  @apply relative pl-8 pb-8 border-l-2 border-blue-500;
+}
+
+.timeline-item:last-child {
+  @apply pb-0;
+}
+
+.timeline-dot {
+  @apply absolute w-4 h-4 rounded-full bg-blue-500 -left-2 top-1;
+}
+
+.code-block {
+  @apply bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm;
+}
+
+/* Print styles */
+@media print {
+  nav, footer {
+    display: none;
+  }
+  .prose {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+/* Vertical Sidebar Styles */
+/* Sidebar Styles */
+.dashboard-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; /* Default sidebar width */
+  background-color: var(--apple-light);
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for toggling */
+}
+
+.dashboard-sidebar.hidden {
+  transform: translateX(-100%); /* Hide the sidebar */
+}
+
+/* Main Content Adjustment */
+.main-content {
+  margin-left: 250px; /* Default margin to accommodate the sidebar */
+  transition: margin-left 0.3s ease; /* Smooth transition for content adjustment */
+}
+
+.dashboard-sidebar.hidden ~ .main-content {
+  margin-left: 0; /* Reset margin when sidebar is hidden */
+}
+
+/* Close Button Styles */
+/* Close Button Styles */
+.close-sidebar {
+  position: absolute;
+  bottom: 20px; /* Position at the bottom */
+  right: 20px; /* Position at the right */
+  background-color: var(--apple-light);
+  border: none;
+  color: var(--apple-dark);
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.close-sidebar:hover {
+  background-color: var(--apple-blue);
+  color: white;
+}
+
+/* Ensure the sidebar has relative positioning for the button to align properly */
+.dashboard-sidebar {
+  position: relative;
+  padding-bottom: 60px; /* Add padding to avoid overlap with the close button */
+}
+/* Hamburger Menu Styles */
+.hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 4px;
+  background-color: var(--apple-dark);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-menu:hover .line {
+  background-color: var(--apple-blue);
+}

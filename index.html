@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Evolution | Comprehensive History</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <?php include 'shared_components/header.html'; ?>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="container text-center">
+      <h1 class="display-3 fw-bold mb-4">The Evolution of the Internet</h1>
+      <p class="lead mb-5">From ARPANET to Web3 - A comprehensive journey through digital history</p>
+      <a href="toc.html" class="btn btn-light btn-lg rounded-pill px-4 py-2">
+        Explore the Timeline <i class="fas fa-chevron-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" class="card-img-top" alt="Historical computers">
+            <div class="card-body">
+              <h3 class="card-title">Historical Foundations</h3>
+              <p class="card-text">Trace the origins from ARPANET to the World Wide Web and beyond.</p>
+              <a href="birth.html" class="btn btn-outline-primary">Explore History</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg" class="card-img-top" alt="Web development">
+            <div class="card-body">
+              <h3 class="card-title">Technology Evolution</h3>
+              <p class="card-text">Discover how HTML, CSS and JavaScript shaped the modern web.</p>
+              <a href="evolution.html" class="btn btn-outline-primary">View Technologies</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" class="card-img-top" alt="Future tech">
+            <div class="card-body">
+              <h3 class="card-title">Future Trends</h3>
+              <p class="card-text">Explore AI, Web3 and other emerging technologies shaping tomorrow.</p>
+              <a href="trends.html" class="btn btn-outline-primary">See Trends</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <?php include 'shared_components/footer.html'; ?>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Scroll Animation -->
+  <script>
+    // Update footer navigation
+    document.querySelector('footer span').textContent = 'Page 1 of 22';
+    document.querySelector('footer a[href="toc.html"]').href = "intro.html";
+    
+    // Add scroll animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.card').forEach(card => {
+        observer.observe(card);
+      });
+    });
+  </script>
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</body>
+</html>
